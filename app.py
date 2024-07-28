@@ -101,11 +101,11 @@ def index():
                 correct, correct_sum = app_logic.check_sum(user_guess)
                 if correct:
                     plot_html = app_logic.generate_chart()
-                    message = f"Correct! Well done! The correct sum is {correct_sum}."
+                    message = f"OK. Tổng là {correct_sum}."
                     return render_template("index.html", number1=app_logic.number1, number2=app_logic.number2,
                                            message=message, plot_html=plot_html, show_new_round=True)
                 else:
-                    message = f"Wrong! The correct sum is {correct_sum}."
+                    message = f"Sai. Kết quả đúng là {correct_sum}."
                     plot_html = app_logic.generate_chart()
                     return render_template("index.html", number1=app_logic.number1, number2=app_logic.number2,
                                            message=message, plot_html=plot_html)
